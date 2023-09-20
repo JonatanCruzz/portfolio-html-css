@@ -41,10 +41,15 @@ body {
 }
 
 .logo {
+    position: relative;
     font-size: 2.5rem;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
+}
+
+.navbar {
+    position: relative;
 }
 
 .navbar a {
@@ -62,6 +67,7 @@ body {
 }
 
 #menu-icon {
+    position: relative;
     font-size: 3.6rem;
     color: #ededed;
     cursor: pointer;
@@ -85,6 +91,7 @@ section {
 
 .home-content {
     max-width: 60rem;
+    z-index: 99;
 }
 
 .home-content h1 {
@@ -94,7 +101,7 @@ section {
 }
 
 .home-content h1 span {
-    color: #61bc84;
+    color: #ededed;
 }
 
 .home-content .text-animate {
@@ -108,6 +115,25 @@ section {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px #61bc84;
+    background-image: linear-gradient(#61bc84, #61bc84);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content .text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid #61bc84;
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 .home-content p {
@@ -295,6 +321,7 @@ span {
     border-bottom: .2rem solid #0e3627;
     border-left: .2rem solid #2E8B57;
     border-right: .2rem solid #2E8B57;
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about-content {
@@ -755,6 +782,24 @@ span {
     color: #2d8956;
 }
 
+/* Animation Reload and Scroll */
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    z-index: 98;
+}
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate {
+    animation: showRights 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
 /* Configurations */
 @media (max-width: 1200px) {
     html {
@@ -837,5 +882,119 @@ span {
     .navbar.active a {
         transform: translateX(0);
         transition-delay: .25s;
+    }
+
+    .home-imgHover {
+        pointer-events: none;
+        background: #0b291e;
+        opacity: .6;
+    }
+}
+
+@media (max-width: 520px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home-content h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-sci {
+        width: 160px;
+    }
+
+    .home-sci a {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 462px) {
+    .home-content h1 {
+        font-size: 5.2rem;
+    }
+
+    .education {
+        padding: 10rem 4% 5rem 5%;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 371px) {
+    .home {
+        justify-content: center;
+    }
+
+    .home-content {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+}
+
+/* Keyframes animation */
+@keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes showRights {
+    100% {
+        width: 0;
     }
 }
