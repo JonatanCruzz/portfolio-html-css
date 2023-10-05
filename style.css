@@ -120,7 +120,9 @@ section {
     background-image: linear-gradient(#61bc84, #61bc84);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-clip: text;
+    background-position: -33rem 0;
+    /* animation: homeBgText 6s linear infinite; */
+    /* animation-delay: 2s; */
 }
 
 .home-content .text-animate h3::before {
@@ -128,12 +130,12 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
-    border-right: 2px solid #61bc84;
+    /* border-right: 2px solid #61bc84; */
     z-index: -1;
-    animation: homeCursorText 6s linear infinite;
-    animation-delay: 2s;
+    /* animation: homeCursorText 6s linear infinite; */
+    /* animation-delay: 2s; */
 }
 
 .home-content p {
@@ -982,8 +984,8 @@ span {
         background-position: -33rem 0;
     }
 
-    65%,
-    85% {
+    50%,
+    70% {
         background-position: 0 0;
     }
 }
@@ -996,16 +998,10 @@ span {
         width: 0;
     }
 
-    65%,
-    78%,
-    85% {
-        width: 100%;
+    50%,
+    70% {
+        width: 52%;
         opacity: 1;
-    }
-
-    75%,
-    81% {
-        opacity: 0;
     }
 }
 
