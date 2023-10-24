@@ -342,6 +342,14 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.more-text {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .btn-box.btns {
     position: relative;
     width: 15rem;
@@ -477,7 +485,7 @@ span {
 }
 
 .container {
-    position: relative; 
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
