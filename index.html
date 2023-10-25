@@ -339,31 +339,32 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contácta <span>Me!</span></h2>
 
-        <form id="contact-form">
+        <!-- <form action="https://formspree.io/f/meqbnrzb" method="POST" id="contact-form"> Alternativo -->
+        <form action="https://formsubmit.co/f43355432639c018fbe18e9d83b4385c" method="POST" id="contact-form">
             <div class="input-box">
                 <div class="input-field">
-                    <input id="full-name" type="text" placeholder="Nombre completo" required>
+                    <input type="text" name="Full-name" id="full-name" placeholder="Nombre completo" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input id="email" type="text" placeholder="Dirección de email" required>
+                    <input type="text" name="Email" id="email" placeholder="Dirección de email" required>
                     <span class="focus"></span>
                 </div>
             </div>
 
             <div class="input-box">
                 <div class="input-field">
-                    <input id="phone" type="number" placeholder="Número de teléfono" required>
+                    <input type="number" name="Phone" id="phone" placeholder="Número de teléfono" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input id="subject" type="text" placeholder="Asunto" required>
+                    <input type="text" name="Subject" id="subject" placeholder="Asunto" required>
                     <span class="focus"></span>
                 </div>
             </div>
 
             <div class="textarea-field">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                <textarea id="message" name="Message" cols="30" rows="10" placeholder="Mensaje" required></textarea>
                 <span class="focus"></span>
             </div>
 

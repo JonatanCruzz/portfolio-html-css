@@ -12,12 +12,12 @@ stickyHeader();
 // read more
 readMore();
 
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
+// document.getElementById("contact-form").addEventListener("submit", function (event) {
+//     event.preventDefault(); // Prevent the default form submission
 
-    // Call your sendEmail function here
-    sendEmail();
+//     // Call your sendEmail function here
+//     sendEmail();
 
-    // Optionally, you can call the reset function after email submission
-    reset();
-});
+//     // Optionally, you can call the reset function after email submission
+//     reset();
+// });
