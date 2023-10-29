@@ -147,7 +147,7 @@ section {
 
 .home-content p {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 2rem 0 4rem;
 }
 
@@ -274,6 +274,7 @@ section {
     opacity: .8;
 }
 
+/* About */
 .about {
     display: flex;
     justify-content: center;
@@ -336,9 +337,15 @@ span {
     font-size: 2.6rem;
 }
 
+.about-content .short-paragraph p {
+    position: relative;
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
+}
+
 .about-content p {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 2rem 0 3rem;
 }
 
@@ -435,7 +442,7 @@ span {
 }
 
 .education-content .content .year {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #2E8B57;
     padding-bottom: .5rem;
 }
@@ -445,11 +452,11 @@ span {
 }
 
 .education-content .content h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .education-content .content p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding-top: .5rem;
 }
 
@@ -490,7 +497,7 @@ span {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-    text-align: ceneter;
+    text-align: center;
     grid-gap: 1rem;
     padding: 1rem 80px;
     font-size: 1.2rem;
@@ -569,6 +576,13 @@ span {
 
 .skill-title h3 {
     color: #fff;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+.skill-box p {
+    color: #fff;
+    font-size: 1.6rem;
     margin-top: 0.5rem;
 }
 
@@ -577,10 +591,116 @@ span {
     z-index: 2;
 }
 
+/* Personal projects */
+.project-heading {
+    text-align: center;
+    font-size: 24px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+.project-box {
+    flex: 0 0 calc(48% - 20px);
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+    margin-bottom: 20px;
+    /* Espacio entre los proyectos */
+}
+
+.project-box:hover>.project-title:after,
+.project-box:hover>.project-title:before {
+    width: 35px;
+}
+
+.project-box:hover .img-project {
+    transform: translateY(-10px);
+}
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.project-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #2ecc71;
+    transition: 0.5s;
+}
+
+.project-title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #2ecc71;
+    transition: 0.5s;
+}
+
+.project-title h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img {
+    width: 100%;
+}
+
+.project-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.project-ico {
+    width: 100%;
+    /* height: 500px; */
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.project-title h3 {
+    font-size: medium;
+}
+
+.project-paragraph {
+    width: 100%;
+    height: auto;
+    font-size: large;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+
 /* Contact */
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
+    background: #0e3627;
 }
 
 .contact h2 {
@@ -719,7 +839,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: #0e3627;
+    background: #0b291e;
 }
 
 .footer-text,
@@ -845,6 +965,11 @@ section:nth-child(odd) .animate.scroll,
         grid-template-columns: repeat(2, 1fr);
         padding: 2rem 50px;
     }
+
+    /* .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    } */
 }
 
 @media (max-width: 850px) {
@@ -921,6 +1046,10 @@ section:nth-child(odd) .animate.scroll,
 
 @media (max-width: 650px) {
     .container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-container {
         grid-template-columns: 1fr;
     }
 }
