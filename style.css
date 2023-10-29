@@ -1112,6 +1112,10 @@ section:nth-child(odd) .animate.scroll,
     .home-content h1 {
         font-size: 5rem;
     }
+
+    .home-sci {
+        bottom: 6rem;
+    }
 }
 
 /* Keyframes animation */
