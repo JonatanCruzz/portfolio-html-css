@@ -689,7 +689,7 @@ span {
 .project-paragraph {
     width: 100%;
     height: auto;
-    font-size: large;
+    font-size: 14px;
     border-radius: 10px;
     object-fit: cover;
     transition: 0.5s;
